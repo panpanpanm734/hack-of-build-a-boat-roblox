@@ -17,6 +17,6 @@ o.TextColor3=Color3.new(1,1,1)o.Font=Enum.Font.SourceSansBold o.TextScaled=true
 local p=Instance.new("TextButton",n)p.Size=UDim2.new(1,0,0.5,0)p.Position=UDim2.new(0,0,0.5,0)p.Text="Activar"
 p.BackgroundColor3=Color3.fromRGB(100,100,100)p.TextColor3=Color3.new(1,1,1)p.Font=Enum.Font.SourceSans p.TextScaled=true
 local q=false
-local function r()while q do local j=a.Character local k=g()if j and k then for m=1,3 do if not q then return end j.HumanoidRootPart.CFrame=k.CFrame task.wait(0.4)end if j:FindFirstChild("Humanoid")then j.Humanoid.Health=0 end task.wait(1.5)end end end
+local function r()while q do local j=a.Character local k=g()if j and k then for m=1,3 do if not q then return end j.HumanoidRootPart.CFrame=k.CFrame task.wait(1.4)end if j:FindFirstChild("Humanoid")then j.Humanoid.Health=0 end task.wait(1.5)end end end
 p.MouseButton1Click:Connect(function()q=not q p.Text=q and"Desactivar"or"Activar"if q then task.spawn(r)end end)
 
